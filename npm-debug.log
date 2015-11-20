@@ -1,0 +1,56 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@2.7.4
+3 info using node@v0.12.2
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 verbose install where, deps [ 'C:\\Users\\user\\Desktop\\code',
+5 verbose install   [ 'body-parser',
+5 verbose install     'cookie-parser',
+5 verbose install     'debug',
+5 verbose install     'ejs',
+5 verbose install     'express',
+5 verbose install     'method-override',
+5 verbose install     'mongoose',
+5 verbose install     'morgan',
+5 verbose install     'serve-favicon',
+5 verbose install     'multer',
+5 verbose install     'angular',
+5 verbose install     'angular ui-router' ] ]
+6 verbose install where, peers [ 'C:\\Users\\user\\Desktop\\code', [] ]
+7 info preinstall stone-express-mongoose@0.0.0
+8 verbose already installed skipping ejs@~2.1.4 C:\Users\user\Desktop\code
+9 verbose already installed skipping express@~4.12.4 C:\Users\user\Desktop\code
+10 verbose already installed skipping method-override@^2.3.1 C:\Users\user\Desktop\code
+11 verbose already installed skipping mongoose@^4.0.0 C:\Users\user\Desktop\code
+12 verbose already installed skipping morgan@~1.5.3 C:\Users\user\Desktop\code
+13 verbose already installed skipping serve-favicon@~2.2.1 C:\Users\user\Desktop\code
+14 verbose already installed skipping multer@~0.1.6 C:\Users\user\Desktop\code
+15 verbose already installed skipping angular@~1.2.13 C:\Users\user\Desktop\code
+16 silly cache add args [ 'angular ui-router@~ 0.2.8', null ]
+17 verbose cache add spec angular ui-router@~ 0.2.8
+18 verbose already installed skipping body-parser@~1.12.4 C:\Users\user\Desktop\code
+19 verbose already installed skipping cookie-parser@~1.3.5 C:\Users\user\Desktop\code
+20 verbose already installed skipping debug@~2.2.0 C:\Users\user\Desktop\code
+21 silly cache add parsed spec { raw: 'angular ui-router@~ 0.2.8',
+21 silly cache add   scope: null,
+21 silly cache add   name: null,
+21 silly cache add   rawSpec: 'angular ui-router@~ 0.2.8',
+21 silly cache add   spec: 'C:\\Users\\user\\Desktop\\code\\angular ui-router@~ 0.2.8',
+21 silly cache add   type: 'local' }
+22 error addLocal Could not install C:\Users\user\Desktop\code\angular ui-router@~ 0.2.8
+23 verbose stack Error: ENOENT, open 'C:\Users\user\Desktop\code\angular ui-router@~ 0.2.8'
+23 verbose stack     at Error (native)
+24 verbose cwd C:\Users\user\Desktop\code
+25 error Windows_NT 6.1.7601
+26 error argv "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+27 error node v0.12.2
+28 error npm  v2.7.4
+29 error path C:\Users\user\Desktop\code\angular ui-router@~ 0.2.8
+30 error code ENOENT
+31 error errno -4058
+32 error enoent ENOENT, open 'C:\Users\user\Desktop\code\angular ui-router@~ 0.2.8'
+32 error enoent This is most likely not a problem with npm itself
+32 error enoent and is related to npm not being able to find a file.
+33 verbose exit [ -4058, true ]

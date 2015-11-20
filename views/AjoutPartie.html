@@ -1,0 +1,19 @@
+
+	  <div ng-controller="MyController1">
+      <p> <p> <center>
+
+	        <li><a href="#" ui-sref="api">api</a></li>
+     <form id="idParts" action="/AddParts" method="post">
+
+<input  type="text"  name="id_art"  >    <p><p>
+
+  <textarea  id="editor1" style="width: 1000px;height:350px;"  class="form-control"
+        name="content" placeholder='saisir la partie'>
+     </textarea> <p> <p>
+                          <p>url parametre is : {{name}}</p>
+
+         <input type="submit" value="valider" class="btn btn-default btn-sm" ng-click="s=true" >
+         </form>
+
+       <button class="btn btn-default btn-sm"   ui-sref="Question"  ng-show="s==true" > Questionnaire </button><p> <p>
+	   <button class="btn btn-default btn-sm"   ui-sref="Affichage"  ng-show="s==true" > Afficher </button><p> <p>
