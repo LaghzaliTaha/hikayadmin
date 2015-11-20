@@ -94,16 +94,28 @@ app.get('/ModifierPartie/:id',function(req,res){
 });
 
 //modification des parties
-app.post('/ModifyParts',function(req,res){ //console.log(req.body.part.content);
-mongoose.model('article').update(
+app.post('/ModifyParts',function(req,res){ console.log('ok');
+/*mongoose.model('article').update(
 { _id :req.body.id_art},
 
-            { $set: {'parts':{content :req.body.part.content}}}
+            { $push: {'parts':{content :req.body.part.content}}}
               ,  {upsert:true}
               ,function(error,result){
                    }
-              );
+              );*/
 
+              mongoose.model('article').findByIdAndRemove(req.body.id_art, function(err) {
+                if (err) throw err;
+
+                // we have deleted the user
+                console.log('article deleted!');
+              });
+
+            mongoose.model('article').create({
+            	article_name :req.body.article[0].article_name,
+            	article_summary: req.body.article[0].article_summary ,
+            	parts :req.body.article[0].parts
+            });
 			  res.redirect('/');
 
   });

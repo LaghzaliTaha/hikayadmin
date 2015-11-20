@@ -3,18 +3,21 @@
 	  <div ng-app="MyModule" ng-controller="MyController3">
       <p> <p> <center>
       <!--form id="idParts1" method="post" action="/ModifyParts"-->
-<form ng-submit="modifier()">
-<input  type="text"  name="id_art"  >    <p><p>
+   <form id="idParts" > {{article[0]}}
+		 <input  type="text" ng-model="article[0].article_name" name="article_name"  >    <p><p>
+			 <input  type="text"  ng-model="article[0].article_summary" name="article_summary"  >    <p><p>
+				 	 <input  type="text"  ng-model="article[0].article_image" name="article_image"  >    <p><p>
+<input  type="text" ng-model="article[0]._id" name="id_art"  >    <p><p>
 			  <div class="col-md-4">
-					 {{article[0].article_name}} <p>
+					 {{article[0]}} <p>
 						  <p ng-repeat="part in article[0].parts">
-						 <textarea  style="width: 1000px;height:350px;" ng-model="part.content" class="form-control" name="part[content]">
+						 <textarea  style="width: 1000px;height:350px;" ng-model="part.content" class="form-control" name="part">
 					  </textarea> <p> <p>
 							<!--a class="btn btn-primary" ui-sref="editPart({part:part.content})">Edit</a--->
 				  </div>
 
 					<!--input type="submit" class="btn btn-default btn-sm" value="submit" -->
- 					<input type="submit" value="Submit" />
+ 					<input type="button"  ng-click="modifier()" />
          </form>
 
 	  </div>

@@ -829,7 +829,7 @@ $scope.clicked2 = function(){
 MyModule.controller("MyController3",function ($scope, $http) {
 
   $scope.article = {};
-  $http.get('/ModifierPartie/564dda7fc26801f010270b68')
+  $http.get('/ModifierPartie/564f0a0814cdb47c1eeae428')
                   .success(function(data) {
                           $scope.article = data;
                           console.log(data);
@@ -839,24 +839,19 @@ MyModule.controller("MyController3",function ($scope, $http) {
                       });
 
 $scope.modifier = function(){
-      $http.post('/ModifyParts',$scope.article)
+   var data=$scope.article[0];
 
-                            .success(function(data){
+      $http.post('/ModifyParts',data)
+
+                             .success(function(data){
                               $scope.article={};
                               $scope.article = data;
-                              /*data = $.param({
-                              firstName: $scope.firstName,
-                              lastName: $scope.lastName,
-                              age: $scope.age
 
-            });*/
+            })
 
-  
-                      	})
-
-                            .error(function(data){
+                        .error(function(data){
                               console.log('Error:' +data);
                       		});
-                      }
+                    }
 
 });
